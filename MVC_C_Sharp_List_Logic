@@ -1,0 +1,15 @@
+using System;
+using System.Collections.Generic;
+using Z.Expressions;
+
+public class Program
+{
+	public static void Main()
+	{
+		var context = new EvalContext();
+		
+		var r = context.Execute<List<int>>("new List<int>() { 1, 2, 3 };");
+		
+		FiddleHelper.WriteTable(r);
+	}
+}
