@@ -1,0 +1,26 @@
+To create an XSD schema file and an RDLC report file in an MVC application and make a connection between them, you can follow these general steps:
+
+Create an XSD schema file:
+
+In Visual Studio, right-click on your project and select "Add" -> "New Item".
+In the "Add New Item" dialog box, select "XML Schema" and name the file.
+Define the schema structure and elements in the XSD file.
+Create an RDLC report file:
+
+In Visual Studio, right-click on your project and select "Add" -> "New Item".
+In the "Add New Item" dialog box, select "Report" -> "Report Wizard".
+Follow the wizard to define the report data source, layout, and design.
+When you reach the "Choose Your Data Source" step in the wizard, select "Object" as the data source type and select the XSD file you created in step 1.
+Make a connection between the XSD and RDLC files:
+
+In the RDLC report file, go to the "Data" tab and click on the "Add New Data Source" button.
+Select "Object" as the data source type and select the XSD file you created in step 1.
+Follow the prompts to select the appropriate table or schema from the XSD file.
+Once you have completed the wizard, you should see the data source listed in the "Data Sources" window.
+Display the report in your MVC application:
+
+In your MVC application, create a controller method that returns an ActionResult for the report view.
+In the view for the report, use the ReportViewer control to display the report.
+Set the ReportViewer control's ProcessingMode to "Local" and its ReportPath property to the path of the RDLC report file.
+Bind the data source to the report using the ReportDataSource object.
+These are general steps, and the exact implementation details may vary depending on your specific requirements and the version of Visual Studio you are using.
